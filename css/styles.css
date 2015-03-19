@@ -1,0 +1,50 @@
+/********************
+NAV STYLE*/
+.nav {
+	height: 90px;
+	width: 100%;
+	background: linear-gradient(to bottom, rgba(91,89,92,1) 0%, rgba(65,64,66,1) 78%, rgba(65,64,66,1) 100%);
+}
+.mainCover {
+	background: blue;
+	background: url(../img/cover.png) no-repeat center center;
+	background-size: cover;
+	width: 100%;
+	height: 570px;
+}
+
+/********************
+ABOUT ME STYLE
+*********************/
+.aboutMeBg {
+	background-color: #D1D3D4;
+	width: 100%;
+	height: 570px;
+	padding: 20px;
+}
+.aboutImg {
+	height: 150px;
+	width: 150px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.aboutImg img {
+	height: 100%;
+	width: 100%;
+	border-radius: 100%;
+	border: dashed 1px black;
+}
+
+/********************
+WHAT I DO
+*********************/
+.whatBg {
+	background-color: #27618E;
+	width: 100%;
+	height: 570px;
+}
+.what {
+	width: 50%;
+	height: 100%;
+	max-width: 800px;
+}
