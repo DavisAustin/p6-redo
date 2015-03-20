@@ -19,6 +19,7 @@ header {
 	font-weight: 700;
 	font-size: 18px;
 	box-shadow: 0 2px 4px black;
+	z-index: 10;
 }
 /* logo */
 .logo {
@@ -64,11 +65,22 @@ MAIN COVER STYLE
 ********************/
 
 .mainCover {
-	background: blue;
 	background: url(../img/cover.png) no-repeat center center;
 	background-size: cover;
 	width: 100%;
 	height: 570px;
+}
+.overlay {
+	background-color: rgba(255,255,255,.2);
+	background-size: cover;
+	width: 100%;
+	height: 570px;
+	opacity: 0;
+	transition: 1s;
+}
+.overlay:hover {
+	opacity: 1;
+	transition: 1s;
 }
 
 /********************
@@ -78,9 +90,10 @@ ABOUT ME STYLE
 	margin-top: -90px;
 }
 .aboutMeBg {
-	background-image: url(../img/aboutBg.png);
+	background-image: url(../img/grey.png);
 	padding: 75px 20px 60px 20px;
 	width: 100%;
+	box-shadow: 0 0 5px 3px rgba(0,0,0,.5);
 }
 .aboutImg {
 	height: 200px;
@@ -93,6 +106,14 @@ ABOUT ME STYLE
 	width: 100%;
 	border-radius: 100%;
 	border: double 8px #CBCBCB;
+	transition: .5s;
+}
+.aboutImg img:hover {
+	height: 100%;
+	width: 100%;
+	border-radius: 30%;
+	border: double 8px #1F5279;
+	transition: .5s;
 }
 .aboutMe {
 	width: 43%;
@@ -118,7 +139,7 @@ ABOUT ME STYLE
 WHAT I DO
 *********************/
 .whatBg {
-	background-image: url(../img/whatBg.png);
+	background-image: url(../img/blue.png);
 	padding: 75px 20px 60px 20px;
 	width: 100%;
 }
@@ -133,6 +154,14 @@ WHAT I DO
 	width: 100%;
 	border-radius: 100%;
 	border: double 8px #1F5279;
+	transition: .5s;
+}
+.whatImg img:hover {
+	height: 100%;
+	width: 100%;
+	border-radius: 30%;
+	border: double 8px #CBCBCB;
+	transition: .5s;
 }
 .what {
 	width: 43%;
@@ -159,7 +188,7 @@ WHAT I DO
 EXPERIENCE
 *********************/
 .expBg {
-	background-image: url(../img/aboutBg.png);
+	background-image: url(../img/grey.png);
 	padding: 75px 20px 60px 20px;
 	width: 100%;
 }
@@ -173,21 +202,43 @@ EXPERIENCE
 	height: 100%;
 	width: 100%;
 	border-radius: 100%;
-	border: double 8px #1F5279;
+	border: double 8px #CBCBCB;
 }
-
+.expImg img:hover {
+	height: 100%;
+	width: 100%;
+	border-radius: 30%;
+	border: double 8px #1F5279;
+	transition: .5s;
+}
 .exp {
-	width: 50%;
+	width: 85%;
 	height: auto;
 	margin: 0 auto;
 }
+.exp:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
 
 .con {
+	float: left;
 	width: 46%;
 	margin-right: 2%;
+	min-width: 320px;
+}
+@media only screen and (max-device-width: 320px) {
+	.exp {
+		width: 50%;
+		height: auto;
+		margin: 0 auto;
+		text-align: center;
+	}
 }
 .ass {
-	float: right;
+	float: left;
 	width: 46%;
 	margin-left: 2%;
 	min-width: 190px;
